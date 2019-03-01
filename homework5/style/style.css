@@ -1,0 +1,50 @@
+.table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.letter {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.cell {
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.blackcell {
+    background-color: black;
+}
+
+.numCell {
+    padding: 15px;
+}
+
+body {
+    text-align: center;
+}
+
+.cart {
+    margin-top: 100px;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 40px auto 0;
+
+}
+
+.commodityWrap {
+    outline: 1px solid black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    box-sizing: border-box;
+}
