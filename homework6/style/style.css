@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+}
+
+.cart {
+    margin-top: 100px;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 40px auto 0;
+
+}
+
+.commodityWrap {
+    outline: 1px solid black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.commodityWrap div {
+    padding: 2px 0;
+    box-sizing: border-box;
+}
+
+
+.buttonBuy {
+    width: 130px;
+    height: 30px;
+    background-color: dodgerblue;
+    border: none;
+    color:white;
+   margin-top: 7px;
+    font-size: 14px;
+}
+
+.buttonBuy:hover{
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+.buttonBuy:active {
+    background-color: deepskyblue;
+}
