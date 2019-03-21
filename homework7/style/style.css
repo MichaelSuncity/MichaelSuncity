@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+.cart {
+    margin-top: 100px;
+}
+
+.catalog {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    margin: 40px auto 0;
+
+}
+
+.commodityWrap {
+    outline: 1px solid black;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    box-sizing: border-box;
+    list-style-type: none;
+    background-color: ghostwhite;
+}
+
+.commodityWrap span {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 0;
+    box-sizing: border-box;
+}
+
+
+button {
+    width: 130px;
+    height: 30px;
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+
+}
+
+button:active {
+    background-color: deepskyblue;
+
+}
+
+#template {
+    display: none;
+}
+
+
+.invisible{
+    display: none;
+}
+
+.cartTable,
+.cartProductHead {
+    width: 1300px;
+    height: auto;
+    background-color:  ghostwhite;
+    margin: 0 auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cartProduct,
+.cartProductHead {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.65fr;
+    justify-content: space-between;
+}
+
+.cartProduct div,
+.cartProductHead div {
+    border: 1px solid black;
+}
+
+.deleteProduct {
+    margin-top: 0;
+    width: auto;
+    border: 1px solid black;
+}
