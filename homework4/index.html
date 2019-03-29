@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <button id="transform">Преобразовать текст</button>
+    <div id="example"></div>
+    <div id="example2"></div>
+
+    <form id="form" name="form" action="#">
+        <label>
+            <p>Имя<br> <input type="text" id="nameUser" name="name" placeholder="Введите Ваше имя"></p>
+        </label>
+        <label>
+            <p>Телефон<br> <input type="text" id="phoneUser" name="phone" placeholder="+7(***)***-****"></p>
+        </label>
+        <label>
+            <p>E-mail <br> <input type="text" id="emailUser" name="email" placeholder="Введите Ваш e-mail"></p>
+        </label>
+        <label>
+            <p>Текст Вашего сообщения <br> <textarea type="textarea" id="textUser" name="text" placeholder="Введите Ваше сообщения"></textarea></p>
+        </label>
+        <input type="submit"  id="submit" value="Отправить">
+        <input type="reset" id="reset" value="Очистить">
+    </form>
+    <div id="message" name="message" class="message"></div>
+
+        <script src="javascript/script.js"></script>
+</body>
+
+</html>
