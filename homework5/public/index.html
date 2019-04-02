@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Document</title>
+    <link rel='stylesheet' href='styles/style.css'>
+ </head>
+
+<body>
+    <main>
+        <div id="app">
+            <div class='container featuredItemsWrap'>
+                <div class="searchWrap">
+                    <input type="text" v-model="searchQuery">
+                </div>
+                <div class='featuredHead'>
+                    Featured Items
+                </div>
+                <div class='featuredDesc'>
+                    Shop for items based on what we featured in this week
+                </div>
+                <div class="featuredItems">
+                    <div v-for="item in filteredItems" class="featuredItem" :id="item.id">
+                        <div class='featuredImgWrap'>
+                            <div class="featuredBuy">
+                                <button id="addToCart" @click="handleClickAdd">
+                                    <img src="images/addToCart.png" alt="">Add to Cart
+                                </button>
+                            </div>
+                            <img :src="item.cover" alt="">
+                        </div>
+                        <div class="featuredNameAndPrice">
+                            <div class="featuredItemName">
+                                {{ item.name }}
+                            </div>
+                            <div class="featuredItemPrice">
+                                {{ '$ '+item.price.toFixed(2) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nodata" v-if="filteredItems.length==0">Нет данных</div>
+                <button class="cartBtn" @click="handleClickShowCart" id="cartBtn">
+                    Cart
+                </button>
+                <div class="isVisibleCart">
+                    <div class="totalCart" v-if="totalCart!=0">Общая стоимость корзины
+                        {{ totalCart.toFixed(2) }} $</div>
+                    <div class="totalCart" v-if="totalCart==0">Корзина пуста</div>
+                    <div class='cart' v-if="totalCart!=0">
+                        <div id='cartProductHead' class='cartProductHead'>
+                            <div>Артикул</div>
+                            <div>Наименование товара</div>
+                            <div>Цена</div>
+                            <div>Количество</div>
+                            <div>Сумма</div>
+                            <button class='deleteProduct' @click="clearCart">Очистить корзину</button>
+                        </div>
+                        <div id='cartProduct' class='cartProduct' v-for="itemCart in cart" :id="itemCart.id">
+                            <div class='name'>{{ itemCart.id }}</div>
+                            <div class='name'>{{ itemCart.name }}</div>
+                            <div class='price'>{{ '$ '+ itemCart.price }}</div>
+                            <div class='quantity'>{{ itemCart.quantity }}</div>
+                            <div> {{ '$ '+ itemCart.price*itemCart.quantity }}</div>
+                            <button class='deleteProduct' @click="handleClickRemove">X</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="javascript/app.js"></script>
+</body>
+
+</html>
