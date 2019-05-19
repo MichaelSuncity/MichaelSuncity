@@ -1,0 +1,42 @@
+.comments {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.message {
+    outline: 1px solid black;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+
+.nameAndTime {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.name {
+    font-size: 25px;
+}
+
+.time {
+    font-style: italic;
+    font-size: 15px;
+}
+
+.image {
+    margin: 5px;
+}
+
+.img {
+    width: 90px;
+    
+}
