@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['load'])){
-   echo uploadAndCheck();
+   uploadAndCheck();
    $path = "img/gallery_img/big/" . $_FILES['myfile']['name']; //путь откуда брать загруженное изображение для создания уменьшенной копии?
    $save = true; // метка, что нужно сохранить уменьшенное изображение?
    $width = 150; 
